@@ -1,7 +1,8 @@
 # 📘 Module 2: Prefix Sum
 
 > **Status:** 🚀 In Progress  
-> **Planned Duration:** 6 Days  
+> **Progress:** **65% Complete**  
+> **Planned Duration:** 4 Days *(Updated)*  
 > **Difficulty:** ⭐⭐☆☆☆ → ⭐⭐⭐⭐☆
 
 ---
@@ -22,14 +23,12 @@ By completing this module, you should be able to:
 
 # 📅 Module Plan
 
-| Day | Topics |
-|-----|--------|
-| **Day 1** | Prefix Sum Theory + LC 1480 + LC 303 |
-| **Day 2** | LC 724 + LC 1732 + LC 2574 |
-| **Day 3** | Prefix Sum + HashMap + LC 560 |
-| **Day 4** | LC 523 + LC 525 + LC 930 |
-| **Day 5** | LC 974 + LC 1248 + LC 1590 |
-| **Day 6** | Revision + Re-solving Important Questions |
+| Day | Topics | Status |
+|------|--------|--------|
+| **Day 1** | Prefix Sum Theory + LC 1480 + LC 303 + LC 724 + LC 1732 + LC 2574 + LC 560 | ✅ Completed |
+| **Day 2** | LC 523 + LC 525 + LC 930 | ⏳ |
+| **Day 3** | LC 974 + LC 1248 + LC 1590 | ⏳ |
+| **Day 4** | Revision + Re-solving Important Questions | ⏳ |
 
 ---
 
@@ -37,40 +36,40 @@ By completing this module, you should be able to:
 
 ## Prefix Sum Basics
 
-- [ ] What is Prefix Sum?
-- [ ] Why Prefix Sum?
-- [ ] Prefix Array Construction
-- [ ] In-place Prefix Sum
-- [ ] Range Sum Query
-- [ ] Prefix Sum Formula
-- [ ] Time Complexity
-- [ ] Space Complexity
+- [x] What is Prefix Sum?
+- [x] Why Prefix Sum?
+- [x] Prefix Array Construction
+- [x] In-place Prefix Sum
+- [x] Range Sum Query
+- [x] Prefix Sum Formula
+- [x] Time Complexity
+- [x] Space Complexity
 
 ---
 
 ## Prefix Sum + HashMap
 
-- [ ] Why HashMap is Required
-- [ ] Prefix Sum Frequency
-- [ ] Counting Subarrays
-- [ ] Running Prefix Sum
-- [ ] Handling Negative Numbers
+- [x] Why HashMap is Required
+- [x] Prefix Sum Frequency
+- [x] Counting Subarrays
+- [x] Running Prefix Sum
+- [x] Handling Negative Numbers
 
 ---
 
 # 🟢 Easy Problems
 
-- [ ] LC 1480 — Running Sum of 1D Array
-- [ ] LC 303 — Range Sum Query - Immutable
-- [ ] LC 724 — Find Pivot Index
-- [ ] LC 1732 — Find the Highest Altitude
-- [ ] LC 2574 — Left and Right Sum Differences
+- [x] LC 1480 — Running Sum of 1D Array
+- [x] LC 303 — Range Sum Query - Immutable
+- [x] LC 724 — Find Pivot Index
+- [x] LC 1732 — Find the Highest Altitude
+- [x] LC 2574 — Left and Right Sum Differences
 
 ---
 
 # 🟡 Medium Problems
 
-- [ ] LC 560 — Subarray Sum Equals K ⭐⭐⭐⭐⭐
+- [x] LC 560 — Subarray Sum Equals K ⭐⭐⭐⭐⭐
 - [ ] LC 523 — Continuous Subarray Sum
 - [ ] LC 525 — Contiguous Array
 - [ ] LC 930 — Binary Subarrays With Sum
@@ -98,17 +97,27 @@ By completing this module, you should be able to:
 
 ✔ Running Sum
 
+✔ Prefix Array Construction
+
+✔ In-place Prefix Sum
+
 ✔ Range Sum Query
 
-✔ O(1) Query Time
+✔ Left Sum & Right Sum Technique
 
-✔ Prefix Array Construction
+✔ Prefix Sum without Prefix Array
+
+✔ O(1) Range Query
 
 ---
 
 ## Prefix Sum + HashMap
 
+✔ Running Prefix Sum
+
 ✔ Frequency Counting
+
+✔ Prefix Sum Frequency
 
 ✔ Subarray Counting
 
@@ -118,27 +127,40 @@ By completing this module, you should be able to:
 
 ✔ Fast Lookup
 
+✔ O(n) Optimization
+
 ---
 
 # 🧠 Important Observations
 
 - Prefix Sum stores cumulative information instead of recalculating sums.
-- Range Sum Queries become O(1) after preprocessing.
-- Prefix Sum alone solves many easy problems.
+- Range Sum Queries become **O(1)** after preprocessing.
+- Prefix Sum alone solves many Easy problems.
 - Prefix Sum + HashMap is one of the most common interview patterns.
 - Many subarray problems become simple once Prefix Sum is recognized.
 - Always think about cumulative information before using nested loops.
+- **Current element is neither part of Left Sum nor Right Sum.**
+- **PrefixSum - PreviousPrefixSum = K** is the key equation behind LC560.
+- Store **Prefix Sum frequencies**, not indices.
+- Always initialize:
+
+```java
+map.put(0,1);
+```
+
+- Always check the HashMap **before** inserting the current Prefix Sum.
 
 ---
 
 # ⚠️ Common Mistakes
 
-- [ ] Forgetting the Range Sum formula.
-- [ ] Incorrect Prefix Array construction.
-- [ ] Forgetting `map.put(0,1)` in LC 560.
-- [ ] Updating HashMap before checking the answer.
-- [ ] Off-by-one errors.
-- [ ] Confusing Prefix Sum with Sliding Window.
+- [x] Included current element in Left Sum (Corrected)
+- [x] Tried using `break` in LC560 (Incorrect)
+- [ ] Forgetting the Range Sum Formula
+- [ ] Forgetting `map.put(0,1)`
+- [ ] Updating HashMap before checking
+- [ ] Off-by-one errors
+- [ ] Confusing Prefix Sum with Sliding Window
 
 ---
 
@@ -148,29 +170,34 @@ Without looking at previous solutions:
 
 ## Theory
 
-- [ ] Explain Prefix Sum.
-- [ ] Explain Range Sum Query.
-- [ ] Explain Prefix + HashMap.
+- [x] Explain Prefix Sum.
+- [x] Explain Range Sum Query.
+- [x] Explain Prefix + HashMap.
 
 ---
 
 ## Coding
 
-- [ ] Build Prefix Array
-- [ ] LC 1480
-- [ ] LC 303
-- [ ] LC 724
-- [ ] LC 560
+- [x] Build Prefix Array
+- [x] LC 1480
+- [x] LC 303
+- [x] LC 724
+- [x] LC 1732
+- [x] LC 2574
+- [x] LC 560
 - [ ] LC 523
 - [ ] LC 525
+- [ ] LC 930
+- [ ] LC 974
 
 ---
 
 ## Understanding
 
-- [ ] Can identify Prefix Sum problems quickly.
-- [ ] Know when Prefix Sum alone is enough.
-- [ ] Know when HashMap is required.
+- [x] Can identify Prefix Sum problems quickly.
+- [x] Know when Prefix Sum alone is enough.
+- [x] Know when HashMap is required.
+- [x] Can derive the Prefix + HashMap formula.
 
 ---
 
@@ -178,7 +205,7 @@ Without looking at previous solutions:
 
 ## Pattern
 
-Prefix Sum
+**Prefix Sum**
 
 ---
 
@@ -188,7 +215,7 @@ Store cumulative information to avoid repeated calculations.
 
 ---
 
-## Formula
+## Prefix Array Formula
 
 ```text
 prefix[i] = prefix[i-1] + arr[i]
@@ -196,7 +223,15 @@ prefix[i] = prefix[i-1] + arr[i]
 
 ---
 
-### Range Sum Formula
+## Running Prefix Sum
+
+```text
+sum += nums[i]
+```
+
+---
+
+## Range Sum Formula
 
 ```text
 If L == 0
@@ -210,31 +245,90 @@ sum = prefix[R] - prefix[L-1]
 
 ---
 
-## When to Use
+## Left & Right Sum Formula
+
+```text
+rightSum = totalSum - leftSum - nums[i]
+```
+
+---
+
+## Prefix + HashMap Formula
+
+```text
+CurrentPrefix - PreviousPrefix = K
+
+PreviousPrefix = CurrentPrefix - K
+```
+
+---
+
+## HashMap Stores
+
+```text
+Prefix Sum → Frequency
+```
+
+Example
+
+```text
+0 → 1
+1 → 2
+3 → 1
+7 → 1
+```
+
+---
+
+## Why map.put(0,1)?
+
+Because the empty Prefix Sum exists before the array starts.
+
+This allows subarrays beginning from index **0** to be counted.
+
+---
+
+## Why answer += map.get(sum-k)?
+
+Multiple previous Prefix Sums may satisfy the condition.
+
+Each occurrence forms a different valid subarray.
+
+---
+
+## Why check before inserting?
+
+The HashMap should only contain Prefix Sums that occurred **before** the current index.
+
+Otherwise, we may incorrectly count the current Prefix Sum itself.
+
+---
+
+## When to Use Prefix Sum
 
 - Range Sum Query
 - Running Sum
 - Left vs Right Sum
-- Subarray Problems
 - Prefix + HashMap
 - Frequency Counting
+- Subarray Problems
 
 ---
 
-## Time Complexity
+# ⏱ Time Complexity
 
 | Operation | Complexity |
-|-----------|------------|
+|------------|------------|
 | Build Prefix Array | O(n) |
 | Range Query | O(1) |
 | Prefix + HashMap | O(n) |
 
 ---
 
-## Space Complexity
+# 💾 Space Complexity
 
 | Method | Complexity |
-|---------|------------|
+|----------|------------|
 | Prefix Array | O(n) |
 | In-place Prefix | O(1) |
 | Prefix + HashMap | O(n) |
@@ -243,11 +337,11 @@ sum = prefix[R] - prefix[L-1]
 
 # 🏁 Module Completion Criteria
 
-- [ ] Understand Prefix Sum.
-- [ ] Understand Prefix + HashMap.
-- [ ] Complete all Easy Problems.
+- [x] Understand Prefix Sum.
+- [x] Understand Prefix + HashMap.
+- [x] Complete all Easy Problems.
+- [x] Solve LC560 without hints.
 - [ ] Complete all Medium Problems.
-- [ ] Solve LC 560 without hints.
 - [ ] Complete Revision Day.
 - [ ] Ready for Two Pointers.
 
@@ -256,20 +350,78 @@ sum = prefix[R] - prefix[L-1]
 # 📊 Progress
 
 ```text
-░░░░░░░░░░░░░░░░░░░░ 0%
+█████████████░░░░░░░ 65%
 
-Module 2 Started 🚀
+Completed
+────────────
+✅ Prefix Sum Basics
+✅ All Easy Problems
+✅ Prefix Sum + HashMap
+✅ LC560
+
+Remaining
+────────────
+⬜ LC523
+⬜ LC525
+⬜ LC930
+⬜ LC974
+⬜ LC1248
+⬜ LC1590
+⬜ Revision
 ```
 
-*(Update as you progress!)*
+---
 
-```text
-██████░░░░░░░░░░░░░░ 30%
+# 📅 Session Log
 
-████████████░░░░░░░░ 60%
+## ✅ Day 1
 
-████████████████████ 100%
-```
+### Theory Covered
+
+- Prefix Sum Fundamentals
+- Prefix Array
+- Running Prefix Sum
+- In-place Prefix Sum
+- Range Sum Query
+- Left & Right Sum Technique
+- Prefix Sum + HashMap
+
+---
+
+### Problems Solved
+
+- ✅ LC1480 — Running Sum
+- ✅ LC303 — Range Sum Query
+- ✅ LC724 — Pivot Index
+- ✅ LC1732 — Highest Altitude
+- ✅ LC2574 — Left & Right Sum Difference
+- ✅ LC560 — Subarray Sum Equals K
+
+---
+
+### Biggest Learnings
+
+- Prefix Sum is a **pattern**, not just an array.
+- Current element never belongs to Left Sum or Right Sum.
+- `PrefixSum - PreviousPrefixSum = K` is the heart of LC560.
+- HashMap stores Prefix Sum **frequencies**, not indices.
+- Always check the map before inserting the current Prefix Sum.
+- Brute Force helps derive the optimal solution.
+
+---
+
+### Mistakes Corrected
+
+- ❌ Included current element in Left Sum.
+- ❌ Tried using `break` in LC560.
+- ✅ Understood why frequencies are stored instead of indices.
+- ✅ Understood why `map.put(0,1)` is required.
+
+---
+
+### Confidence
+
+⭐⭐⭐⭐☆ (4.5/5)
 
 ---
 
@@ -289,6 +441,6 @@ Next Module:
 
 ---
 
-## 🚀 Final Takeaway
+# 🚀 Final Takeaway
 
-> **"Prefix Sum teaches you to preprocess once and answer many times. The real skill is recognizing when cumulative information can replace repeated work."**
+> **"Prefix Sum is not about storing sums—it's about recognizing cumulative information. Once you see `Current Prefix - Previous Prefix`, many O(n²) subarray problems collapse into elegant O(n) solutions."**
