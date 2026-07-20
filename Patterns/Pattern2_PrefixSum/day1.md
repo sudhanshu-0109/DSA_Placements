@@ -444,3 +444,34 @@ Next Module:
 # 🚀 Final Takeaway
 
 > **"Prefix Sum is not about storing sums—it's about recognizing cumulative information. Once you see `Current Prefix - Previous Prefix`, many O(n²) subarray problems collapse into elegant O(n) solutions."**
+
+
+
+
+## 📅 Session Log (Continuation)
+
+### ✅ LC523 — Continuous Subarray Sum
+
+#### New Pattern Learned
+
+- Prefix Sum + Modulo (Remainder)
+- Equal Remainders imply a divisible subarray.
+- HashMap stores **Remainder → First Occurrence Index**.
+- Initialize with `map.put(0, -1)` to handle subarrays starting from index `0`.
+- Store only the first occurrence of each remainder.
+
+#### Brute Force Progression
+
+O(n³)
+→ Prefix Sum O(n²)
+→ Prefix Sum + HashMap O(n)
+
+#### Biggest Learning
+
+The real optimization was **not** computing sums faster—it was avoiding checking every possible subarray.
+
+#### Confidence
+
+⭐⭐⭐⭐☆ (4/5)
+
+> "This was the toughest Prefix Sum problem so far. I now understand *why* equal remainders work instead of simply memorizing the solution."
